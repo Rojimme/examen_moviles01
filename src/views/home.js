@@ -27,7 +27,7 @@ const Home = ({ navigation }) => {
   const ElementoPokemon = ({ item }) => (
     <TouchableOpacity
       style={style_01.itemContainer}
-      onPress={() => navigation.navigate('DetallesPokemon', { pokemon: item })}
+      onPress={() => navigation.navigate('DetallesPokemon', { pokemonName: item.name })}
     >
       <Image
         source={{ uri: `https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/${item.name}.png` }}
@@ -36,7 +36,6 @@ const Home = ({ navigation }) => {
       <Text style={style_01.pokemonName}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</Text>
     </TouchableOpacity>
   );
-
   return (
     <SafeAreaView style={style_01.container}>
       <View style={style_01.header}>
@@ -46,6 +45,7 @@ const Home = ({ navigation }) => {
         />
 		<Image style ={style_01.animales} source={require('../img/pocke.jpg')} />
       </View>
+
 	  <View style={style_01.navBar}>
         {['First', 'Second', 'Third', 'Fourth', 'Fifth'].map((gen) => (
           <TouchableOpacity key={gen} onPress={() => establecerGeneracion(gen)}>
@@ -53,6 +53,8 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
         ))}
       </View>
+
+
       <FlatList
         data={pokemons}
         renderItem={ElementoPokemon}

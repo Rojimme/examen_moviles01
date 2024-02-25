@@ -61,4 +61,3 @@ pokemonName: {
         resizeMode: 'contain'
       },
         });
-	
