@@ -7,11 +7,11 @@ import { View, Text, Image, StyleSheet, ActivityIndicator, FlatList } from 'reac
 const EstiloDetallado = StyleSheet.create({
   contenedorPrincipal: { flex: 1, padding: 20 },
   imagen: { width: 200, height: 200, alignSelf: 'center' },
-  textoTitulo: { fontSize: 22, fontWeight: 'bold', textAlign: 'center', marginVertical: 8 },
-  caracteristicasTexto: { fontSize: 16, marginTop: 5 },
-  listaContenedor: { marginTop: 10 },
-  listaItem: { flexDirection: 'row', justifyContent: 'space-between', padding: 10, borderBottomWidth: 1, borderColor: '#cccccc' },
-  listaTitulo: { fontWeight: 'bold' },
+  textoTitulo: { fontSize: 22, fontWeight: 'bold', textAlign: 'center', marginVertical: 8, backgroundColor: '#F2CA50', },
+  caracteristicasTexto: { fontSize: 22, marginTop: 8, textAlign: 'center', Color: '#F2CA50', },
+  listaContenedor: { marginTop: 10, textAlign: 'center', },
+  listaItem: { flexDirection: 'row', justifyContent: 'space-between', padding: 10, borderBottomWidth: 3, borderColor: '#cccccc', textAlign: 'center', },
+  listaTitulo: { fontWeight: 'bold', textAlign: 'center',  },
 });
 
 //CARGAR LA FUNCION 
